@@ -1,3 +1,10 @@
+---
+layout: default
+title: nAttrMon docs
+has_children: true
+---
+
+
 <a href="/"><img align="right" src="images/logo.png"></a>
 Welcome to the nAttrMon
 
