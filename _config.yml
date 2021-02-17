@@ -1,1 +1,6 @@
-theme: jekyll-theme-minimal
+remote_theme: pmarsceill/just-the-docs
+logo: images/nAttrMon.png
+title: nAttrMon docs
+description: nAttrMon guides, concepts and how-tos documentation.
+eading_anchors: true
+nav_sort: case_sensitive
