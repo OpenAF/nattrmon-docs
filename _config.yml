@@ -1,6 +1,1 @@
-remote_theme: pmarsceill/just-the-docs
-logo: images/openaf_medium.png
-title: nAttrMon docs
-description: nAttrMon guides, concepts and how-tos documentation.
-eading_anchors: true
-nav_sort: case_sensitive
+theme: jekyll-theme-minimal
