@@ -10,7 +10,7 @@ grand_parent: nAttrMon docs
 
 ----
 
-This functionality is now provided directly on the ops channel, check [output channels description](nAttrMon-nOutput-Channels).
+This functionality is now provided directly on the ops channel, check [output channels description](../reference/outputs/nAttrMon-nOutput-Channels).
 
 ----
 
