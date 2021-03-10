@@ -1,4 +1,10 @@
-# nInput CBPMDebugChecks <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: CBPMDebugChecks
+parent: Inputs
+grand_parent: Reference
+---
+# nInput CBPMDebugChecks
 
 This input will retrieve the database and memory debug levels for CBPM flows. It's intended to be used to alert for full debug situations.
 

@@ -1,4 +1,10 @@
-# nInput Shell <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Shell
+parent: Inputs
+grand_parent: Reference
+---
+# nInput Shell
 
 This input executes a shell command locally or remotely (via ssh) and can parse the output if JSON (otherwise will create an attribute with the stdout text).
 

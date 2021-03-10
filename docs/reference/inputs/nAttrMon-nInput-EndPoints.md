@@ -1,4 +1,10 @@
-# nInput EndPoints <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: EndPoints
+parent: Inputs
+grand_parent: Reference
+---
+# nInput EndPoints
 
 This input tests a HTTP/HTTPs endpoint or a TCP port for reachability/expected availability. Each defined attribute will be a map with a boolean result and a errorMessage string (defaults to "n/a" if result = false).
 

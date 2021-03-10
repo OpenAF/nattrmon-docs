@@ -1,4 +1,10 @@
-# nInput RemoteChannel <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: RemoteChannel
+parent: Inputs
+grand_parent: Reference
+---
+# nInput RemoteChannel
 
 Retrieves attribute values from a remote channel (for example, from another nAttrMon's cvals channel). Each channel key should contain the name of the attribute (using the parameter idKey (by default "name")) and each channel value should contain the value of the attribute (defaults to "val"). The attributes will be added using attrTemplate (that, by default, is the channel key idKey value). Additionally you can filter the attributes to include and/or exclude otherwise all channel entries will be consider.
 

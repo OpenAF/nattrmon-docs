@@ -1,4 +1,10 @@
-# nInput Channel <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Channel
+parent: Inputs
+grand_parent: Reference
+---
+# nInput Channel
 
 Creates and/or exposes a provided channel and then subscribe that channal for modifications. Once a modification is received an attribute value is created or updated. The channel key should contain the name of the attribute (using the parameter idKey (by default "name")) and the channel value should contain the value of the attribute (if only part of the map, as in the case of using nOutput_RemoteChannel the parameter valueKey should indicate the path to find it (e.g. "val")). The attribute will be added using attrTemplate (that, by default, is the channel key idKey value).
 

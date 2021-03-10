@@ -1,4 +1,10 @@
-# nInput HTTPJson <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: HTTPJson
+parent: Inputs
+grand_parent: Reference
+---
+# nInput HTTPJson
 
 This input retrieves a json parsed content from a HTTP/HTTPs external URL and makes it the content of the corresponding attribute. It allows to apply a selector or even a function to filter the results to be stored on the attribute.
 

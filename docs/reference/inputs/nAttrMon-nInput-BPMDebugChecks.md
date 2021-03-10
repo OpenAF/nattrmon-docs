@@ -1,4 +1,10 @@
-# nInput BPMDebugChecks <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: BPMDebugChecks
+parent: Inputs
+grand_parent: Reference
+---
+# nInput BPMDebugChecks
 
 This input will retrieve the database & memory debug levels and any trace executiong for BPM flows. It's intended to be used to alert for full debug situations.
 

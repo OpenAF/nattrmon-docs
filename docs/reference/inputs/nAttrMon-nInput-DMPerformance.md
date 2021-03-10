@@ -1,4 +1,10 @@
-# nInput DMPerformance <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: DMPerformance
+parent: Inputs
+grand_parent: Reference
+---
+# nInput DMPerformance
 
 This input retrieves the time elapsed to fully execute a set of DataModel queries (for the first 100 records) vs executing the corresponding SQL queries on the database to measure performance downgrades overtime. Use it for DataModel queries that you identify that will be a performance worry (e.g. main land page, heavy query, important indicatores, etc...). The queries can be executed just one time or in a series of n executions to select the best results (e.g. with caching).
 
