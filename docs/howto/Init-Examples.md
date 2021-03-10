@@ -1,3 +1,9 @@
+---
+layout: default
+title: Servers init example
+parent: How To
+grand_parent: nAttrMon docs
+---
 # Servers init example
 
 ````javascript

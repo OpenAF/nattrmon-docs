@@ -1,4 +1,10 @@
-# Examples <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Folders
+parent: How To
+grand_parent: nAttrMon docs
+---
+# Examples
 nAttrMon YAML/JSON based Inputs, Output or Validations can be created in the same folders as the regular JS based Inputs, Outputs and Validations.
 
 ## Some basic examples comparing YAML, JSON and Javascript:

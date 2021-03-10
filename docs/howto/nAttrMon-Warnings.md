@@ -1,3 +1,9 @@
+---
+layout: default
+title: Operational Tips&Tricks
+parent: How To
+grand_parent: nAttrMon docs
+---
 # Operational tips&tricks
 
 ### How to force the cleaning of a warning

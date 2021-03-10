@@ -1,3 +1,9 @@
+---
+layout: default
+title: Interconnect nAttrMon's instances
+parent: How To
+grand_parent: nAttrMon docs
+---
 # Interconnect nAttrMon's instances
 
 Althought nAttrMon can be operated in an "agent-less" mode (for most of the inputs) on installed directly or directly on a single server it's possible also to operate it on a "agent" mode where nAttrMon instances are deploy across several servers with output plugs to send the attribute values to other nAttrMon instances.
