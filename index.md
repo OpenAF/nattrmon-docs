@@ -48,8 +48,8 @@ opack script nattrmon
 # Adding plugs
 
 * [Generic plugs parameters](docs/concepts/nAttrMon-Plugs)
-* [Examples of adding Inputs, Outputs or Validations](docs/howot/Examples)
-* [Existing base Inputs, Outputs or Validations (also known as objects)](reference/nAttrMon-Objects)
+* [Examples of adding Inputs, Outputs or Validations](docs/howto/Examples)
+* [Existing base Inputs, Outputs or Validations (also known as objects)](reference/nAttrMon-Objects.md)
 
 # Operational topics
 
