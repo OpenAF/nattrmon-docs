@@ -11,15 +11,15 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Type | Name | Category | Description |
 |-----:|------|----------|-------------|
 | Input | nInput_AFPing | RAID | Executes the RAID Ping AF operation to determine if an instance is responsive. |
-| Input | [nInput_BPMDebugChecks](nAttrMon-nInput-BPMDebugChecks) | RAID | Checks the database & memory debug levels and any existing trace execution on BPM flows. |
-| Input | [nInput_CBPMDebugChecks](nAttrMon-nInput-CBPMDebugChecks) | RAID | Checks the database & memory debug levels on CBPM flows. |
+| Input | [nInput_BPMDebugChecks](inputs/nAttrMon-nInput-BPMDebugChecks) | RAID | Checks the database & memory debug levels and any existing trace execution on BPM flows. |
+| Input | [nInput_CBPMDebugChecks](inputs/nAttrMon-nInput-CBPMDebugChecks) | RAID | Checks the database & memory debug levels on CBPM flows. |
 | Input | nInput_CBPMSemaphores | RAID | Checks the values of RAID's instance semaphores. |
 | Input | nInput_DB | DB | Executes a SQL query and returns the result as input. |
-| Input | [nInput_EndPoints](nAttrMon-nInput-EndPoints) | OS | Test for reachability/expected availability of HTTP(s) URLs or TCP ports. |
+| Input | [nInput_EndPoints](inputs/nAttrMon-nInput-EndPoints) | OS | Test for reachability/expected availability of HTTP(s) URLs or TCP ports. |
 | Input | nInput_FMSRuleStatus | RAID | Gets each RAID FMS engine rule status (active, inactive, inactive by anti-flooding) |
 | Input | nInput_Filesystem | OS | Per unix mount point gets the total, used, free and % used space and inode totals (locally or remotely). |
 | Input | nInput_FilesystemCount | OS | Per filepath and filename regular expression filter, returns the total count and size, the min, max and avg size of existing files, the date of the newest file and oldest file (locally or remotely). |
-| Input | [nInput_HTTPJson](nAttrMon-nInput-HTTPJson) | OS | Retrieves a json parsed content from a HTTP/HTTPs external URL and makes it the content of the corresponding attribute. It allows to apply a selector or even a function to filter the results to be stored on the attribute. |
+| Input | [nInput_HTTPJson](inputs/nAttrMon-nInput-HTTPJson) | OS | Retrieves a json parsed content from a HTTP/HTTPs external URL and makes it the content of the corresponding attribute. It allows to apply a selector or even a function to filter the results to be stored on the attribute. |
 | Input | nInput_IMAbnormalLoadings | RAID | Checks for IM loadings that didn't process the expected number of records. | 
 | Input | nInput_IMLoadingsProgress | RAID | Monitor the specified IM block types loading progress by number of runs, min, max, avg records processed, etc. |
 | Input | nInput_IMMemory | RAID | Returns the current RAID instance reported IM memory. |
@@ -29,27 +29,27 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Input | nInput_RunningFlows | RAID | Returns the current BPM running flows. |
 | Input | nInput_Semaphores | RAID | Returns the current BPM semaphores values. |
 | Input | nInput_Sessions | RAID | Returns the current sessions list for a RAID instance. |
-| Input | [nInput_Shell](nAttrMon-nInput-Shell) | OS | Executes (locally or remotely) and returns the output of a shell command (parsing or not the output as JSON). |
-| Input | [nInput_Channel](nAttrMon-nInput-Channel) | Input Channel | Receives attributes from another nAttrMon or OpenAF script. |
-| Input | [nInput_RemoteChannel](nAttrMon-nInput-RemoteChannel) | Input Channel | Retrieves attributes from another nAttrMon or OpenAF script through an OpenAF channel. | 
+| Input | [nInput_Shell](inputs/nAttrMon-nInput-Shell) | OS | Executes (locally or remotely) and returns the output of a shell command (parsing or not the output as JSON). |
+| Input | [nInput_Channel](inputs/nAttrMon-nInput-Channel) | Input Channel | Receives attributes from another nAttrMon or OpenAF script. |
+| Input | [nInput_RemoteChannel](inputs/nAttrMon-nInput-RemoteChannel) | Input Channel | Retrieves attributes from another nAttrMon or OpenAF script through an OpenAF channel. | 
 | Input | nInput_Schedulers | RAID | Checks when each scheduler entry executed and when the next is scheduled to execute. | 
 | Input | nInput_CompareTimes | OS | Compares the time difference between a RAID application server and corresponding connected databases. |
 | Input | nInput_DMPerformance | RAID | Measure performance of Data Model queries vs direct database SQL queries. |
 | Input | nInput_EndPoints | OS | Check if a port or http endpoint si reachable within certain criteria (e.g. timeout, response, ...) |
-| Output | [nOutput_DSV](nAttrMon-nOutput-DSV) | Output DSV | Outputs a specific set of attributes or warnings to DSV/CSV files per date with automatic housekeeping. | 
-| Output | [nOutput_EmailWarnings](nAttrMon-nOutput-EmailWarnings) | Output Warning | If there is any new level HIGH warning (or any other combination) it will send an email with it. |
+| Output | [nOutput_DSV](outputs/nAttrMon-nOutput-DSV) | Output DSV | Outputs a specific set of attributes or warnings to DSV/CSV files per date with automatic housekeeping. | 
+| Output | [nOutput_EmailWarnings](outputs/nAttrMon-nOutput-EmailWarnings) | Output Warning | If there is any new level HIGH warning (or any other combination) it will send an email with it. |
 | Output | nOutput_H2 | Output History | Records the attribute values and warnings on a H2 database. |
 | Output | nOutput_HTTP | Output HTTP | Provides a minimal HTTP interface to check attribute values, warnings and output history (if activated). |
 | Output | nOutput_HTTP_JSON | Output HTTP | Provides a JSON full dump of the current attribute, attribute values and warnings. |
 | Output | nOutput_Log | Output Log | Outputs the current attribute values into a text log file. |
 | Output | nOutput_Oracle | Output History | Records the attribute values and warnings on a Oracle database. |
 | Output | nOutput_Stdout | Output Log | Outputs the current attribute values into the stdout. |
-| Output | [nOutput_Channels](nAttrMon-nOutput-Channels) | Output Channels | Exposes several OpenAF channels with attributes, values, warnings and plugs plus access to operational functionality. |
-| Output | [nOutput_RemoteChannel](nAttrMon-nOutput-Channel) | Output Channel | Pushes attribute values to a remote nAttrMon or OpenAF script through an OpenAF channel. |
-| Output | [nOutput_Notifications](nAttrMon-nOutput-Notifications) | Output Warnings | Sends push notifications triggered by warnings. |
+| Output | [nOutput_Channels](outputs/nAttrMon-nOutput-Channels) | Output Channels | Exposes several OpenAF channels with attributes, values, warnings and plugs plus access to operational functionality. |
+| Output | [nOutput_RemoteChannel](outputs/nAttrMon-nOutput-Channel) | Output Channel | Pushes attribute values to a remote nAttrMon or OpenAF script through an OpenAF channel. |
+| Output | [nOutput_Notifications](outputs/nAttrMon-nOutput-Notifications) | Output Warnings | Sends push notifications triggered by warnings. |
 | Output | nOutput_ES | Output ES | Outputs attribute values and warnings to an ElasticSearch cluster. |
 | Output | nOutput_Slack | Output Slack | Outputs warnings to Slack. |
-| Validation | [nValidation_Generic](nAttrMon-nValidation-Generic) | Validation Generic | Simple generic validation for an attribute or any set of attribute patterns. |
+| Validation | [nValidation_Generic](validations/nAttrMon-nValidation-Generic) | Validation Generic | Simple generic validation for an attribute or any set of attribute patterns. |
 
 ## Object templates
 
