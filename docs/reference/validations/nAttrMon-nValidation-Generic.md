@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Validation Generic
-parent: Reference
-grand_parent: nAttrMon docs
+parent: Validations
+grand_parent: Reference
 ---
 # nValidation Generic
 
