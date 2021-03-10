@@ -1,4 +1,10 @@
-# Current objects <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Objects
+parent: Reference
+grand_parent: nAttrMon docs
+---
+# Current objects
 
 The following is a list of the current objects base for Inputs, Outputs and Validations:
 
