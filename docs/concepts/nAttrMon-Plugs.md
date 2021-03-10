@@ -29,4 +29,4 @@ nAttrMon plugs are a basic unit to add inputs, outputs and validations to nAttrM
 | _chHandleSetAll_ | Boolean | No | If a buffer channel (e.g. nattrmon::cvals::buffer or nattrmon::warns::buffer) is used with chSubscribe and the corresponding plug doesn't support the operation "setall" setting chHandleSetAll will interate over the setall values set simulating "set" operations. |
 | _killAfterMinutes_ | Number | No | If defined each plug execution will timeout after the corresponding number of minutes. Since this requires a separate specific thread it should only be used when there is a danger of a plug influence the global nAttrMon performance. |
 
-Check out some examples of use in the [examples](Examples) page.
+Check out some examples of use in the [examples](../howto/Examples) page.

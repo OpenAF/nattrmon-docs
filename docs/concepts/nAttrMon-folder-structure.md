@@ -35,7 +35,7 @@ The config folders as the following main sub-folders:
 | objects | This is the place for reusable inputs, outputs and validations. They can be used with execFrom (in yaml and json plug files) or instantiating the javascript object (in javascript plug files) |
 | objects.assets | This is where objects on the *objects* folder refer to their corresponding assets (for example css for HTTP output) |
 
-**Note:** regarding enabling/disabling plugs please refer also to [.nattrmonignore](nAttrMon-nattrmonignore).
+**Note:** regarding enabling/disabling plugs please refer also to [.nattrmonignore](nAttrMon-nattrmonignore.md).
 
 ## Lib
 
