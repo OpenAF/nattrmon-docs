@@ -30,13 +30,13 @@ opack install nattrmon
 ````
 This will install a nAttrMon opack folder on your OpenAF installation. Check the following topics for more details regarding the folder structure and base configuration:
 
-* [nAttrMon folder structure](nAttrMon-folder-structure)
-* [nAttrMon base configuration](nAttrMon-base-configuration)
+* [nAttrMon folder structure](docs/concepts/nAttrMon-folder-structure)
+* [nAttrMon base configuration](docs/concepts/nAttrMon-base-configuration)
 
 Afterwards you will need to add some input, output and validation plugs covered below under "Adding plugs". Then you can start by executing:
 
 ````bash
-openaf --script nattrmon.js
+oaf -f nattrmon.js
 ````
 
 Alternatevily you can create a start script be executing:
@@ -47,12 +47,12 @@ opack script nattrmon
 
 # Adding plugs
 
-* [Generic plugs parameters](nAttrMon-Plugs)
-* [Examples of adding Inputs, Outputs or Validations](Examples)
-* [Existing base Inputs, Outputs or Validations (also known as objects)](nAttrMon-Objects)
+* [Generic plugs parameters](docs/concepts/nAttrMon-Plugs)
+* [Examples of adding Inputs, Outputs or Validations](docs/howot/Examples)
+* [Existing base Inputs, Outputs or Validations (also known as objects)](reference/nAttrMon-Objects)
 
 # Operational topics
 
-* [Managing warnings](nAttrMon-Warnings)
-* [Interconnecting several nAttrMon's instances](nAttrMon-Interconnect)
-* [Auditing](nAttrMon-Auditing)
+* [Managing warnings](docs/howto/nAttrMon-Warnings)
+* [Interconnecting several nAttrMon's instances](docs/howto/nAttrMon-Interconnect)
+* [Auditing](docs/howto/nAttrMon-Auditing)
