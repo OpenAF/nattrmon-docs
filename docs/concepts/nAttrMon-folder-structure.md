@@ -1,4 +1,10 @@
-# Folders <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Folders
+parent: Concepts
+grand_parent: nAttrMon docs
+---
+# Folders
 
 | Folder | Description |
 |--------|-------------|

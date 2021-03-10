@@ -1,4 +1,10 @@
-# Template helpers <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Template helpers
+parent: Concepts
+grand_parent: nAttrMon docs
+---
+# Template helpers
 
 Throughout nAttrMon you can use OpenAF's template functionality (ow.template based on Handlebars) for which nAttrMon registers some Handlebars helpers to access internal nAttrMon data as described on the following table:
 

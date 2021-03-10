@@ -1,4 +1,10 @@
-# nAttrMon's .nattrmonignore <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: .nattrmonignore
+parent: Concepts
+grand_parent: nAttrMon docs
+---
+# nAttrMon's .nattrmonignore 
 
 There are two mechanisms in nAttrMon to disable/enable objects, inputs, outputs and validations (or any kind of plug for that matter):
 

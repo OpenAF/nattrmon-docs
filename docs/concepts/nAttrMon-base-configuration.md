@@ -1,4 +1,10 @@
-# Base Configuration <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Base configuration
+parent: Concepts
+grand_parent: nAttrMon docs
+---
+# Base configuration
 
 nAttrMon is composed of a core (the files that get installed and updated through opack) + configuration (the plugs that determine the inputs, outputs and validations). The following sub-chapters concern the settings available for the core part.
 
