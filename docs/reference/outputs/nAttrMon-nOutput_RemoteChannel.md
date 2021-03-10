@@ -1,4 +1,10 @@
-# nOutput RemoteChannel <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: RemoteChannel
+parent: Outputs
+grand_parent: Reference
+---
+# nOutput RemoteChannel
 
 Pushes attributes to a remote channel (for example, to another nAttrMon's nInput_Channel). The attributes will be pushed using attrTemplate (that, by default, is the channel key idKey value). Additionally you can filter the attributes to include and/or exclude otherwise all attributes will be consider.
 

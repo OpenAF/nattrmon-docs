@@ -1,4 +1,10 @@
-# nOutput Notifications <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: Notifications
+parent: Outputs
+grand_parent: Reference
+---
+# nOutput Notifications
 
 This output sends push notifications (using https://pushover.net) upon match with a specific warning or warnings. 
 

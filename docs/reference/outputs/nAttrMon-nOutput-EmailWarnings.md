@@ -1,4 +1,10 @@
-# nOutput EmailWArnings <a href="/"><img align="right" src="images/logo.png"></a>
+---
+layout: default
+title: EmailWarnings
+parent: Outputs
+grand_parent: Reference
+---
+# nOutput EmailWarnings
 
 This output sends email notifications whenever a specific type or types of warnings (usually 'High' level) are created. The email will follow the template in object.assets/noutputemailwarnings displaying all the current warnings for all warning levels (e.g. High, Medium, Low and Info).
 
