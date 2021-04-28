@@ -15,15 +15,9 @@ nAttrMon (*n-Attribute-Monitor*) is basically a small monitoring tool using [Ope
    * The *validations* are responsible to analyze the attribute values and generate warnings and/or perform actions (e.g. self-healing).
    * The *outputs* are responsible to make attribute values and warnings available (e.g. HTTP, Email, Notification, etc...).
 
-These plugs are loaded (by alphanumeric order from their corresponding folder) upon nAttrMon start and run in parallel on specific time intervals, internal cron schedule or triggered by changes (e.g. changes on attribute values, creation/update/close of warnings, etc...). These plugs can inherit most of their functionality from available existing objects (to promote reusability) or be totally customized.
+# Install
 
-At all times plugs have access to the current warnings, current atribute values and previous attribute values that are stored in memory either by time or by the last different value. These values can be simple types (e.g. strings, numbers, booleans, ...) or maps/arrays. nAttrMon keeps track of when an attribute was last checked and when it's value last changed. 
-
-nAttrMon is designed to be "killed" and restarted whenever needed so all relevant memory information is persisted automatically in snapshot files.
-
-Available to plugs are also object pools to globally manage access to databases, application servers, ssh connections, etc. These object pools are accessed by keys (either static or dynamic) that can have associations between them (e.g. application server A (key "APP1") is associated with database server connection B (key "DAT1")). Since the list of keys and corresponding object pools can be dynamic, plugs can automatically adapt to changes in sources (e.g., adding/removing application servers, adding/removing database connections, adding/removing docker containers).
-
-To install nAttrMon you will need to first install OpenAF and then simply execute:
+To install nAttrMon you will need to first install [OpenAF](https://openaf.github.io/openaf-docs/#installing) and then simply execute:
 
 ````bash
 opack install nattrmon
@@ -44,6 +38,24 @@ Alternatevily you can create a start script be executing:
 ````bash
 opack script nattrmon
 ````
+
+# Source
+
+You can also checkout all the sources on [GitHub](https://github.com/OpenAF/nAttrMon).
+
+# Inputs, Outputs and Validations
+
+The inputs, outputs plugs are loaded (by alphanumeric order from their corresponding folder) upon nAttrMon start and run in parallel on specific time intervals, internal cron schedule or triggered by changes (e.g. changes on attribute values, creation/update/close of warnings, etc...). These plugs can inherit most of their functionality from available existing objects (to promote reusability) or be totally customized.
+
+# Attribute values and Warnings 
+
+At all times plugs have access to the current warnings, current atribute values and previous attribute values that are stored in memory either by time or by the last different value. These values can be simple types (e.g. strings, numbers, booleans, ...) or maps/arrays. nAttrMon keeps track of when an attribute was last checked and when it's value last changed. 
+
+# Operating and accessing other systems
+
+nAttrMon is designed to be "killed" and restarted whenever needed so all relevant memory information is persisted automatically in snapshot files.
+
+Available to plugs are also object pools to globally manage access to databases, application servers, ssh connections, etc. These object pools are accessed by keys (either static or dynamic) that can have associations between them (e.g. application server A (key "APP1") is associated with database server connection B (key "DAT1")). Since the list of keys and corresponding object pools can be dynamic, plugs can automatically adapt to changes in sources (e.g., adding/removing application servers, adding/removing database connections, adding/removing docker containers).
 
 # Adding plugs
 
