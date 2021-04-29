@@ -17,6 +17,7 @@ This output exposes nAttrMon internal channels and data externally (configurable
 | cAuth | Map | No | Equal no local (to be deprecated in the future) |
 | custom | String | No | Function that receives 4 arguments: u (user), p (password), s (HTTPd server object) and r (request map). If it returns true the user is authenticated, if returns false or fails the user is not authenticated. |
 | peers | Array | No | List of channels HTTP(s) URL prefixes to peer with other nAttrMons. |
+| channels | Array | No | Extra existing OpenAF channels to be exposed, and optionally peered, with the nAttrMon internal ones. |
 
 Example of use of the execArgs:
 
