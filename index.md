@@ -45,7 +45,8 @@ You can also checkout all the sources on [GitHub](https://github.com/OpenAF/nAtt
 
 # Architecture
 
-![nAttrMon architecure](/images/nattrmon_arch.png "nAttrMon architecture")
+<div style="text-align:center"><img src="images/nattrmon_arch.png" alt="nAttrMon architecture"/></div>
+
 ## Inputs, Outputs and Validations
 
 The inputs, outputs plugs are loaded (by alphanumeric order from their corresponding folder) upon nAttrMon start and run in parallel on specific time intervals, internal cron schedule or triggered by changes (e.g. changes on attribute values, creation/update/close of warnings, etc...). These plugs can inherit most of their functionality from available existing objects (to promote reusability) or be totally customized.
