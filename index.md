@@ -62,13 +62,15 @@ nAttrMon is designed to be "killed" and restarted whenever needed so all relevan
 Available to plugs are also object pools to globally manage access to databases, application servers, ssh connections, etc. These object pools are accessed by keys (either static or dynamic) that can have associations between them (e.g. application server A (key "APP1") is associated with database server connection B (key "DAT1")). Since the list of keys and corresponding object pools can be dynamic, plugs can automatically adapt to changes in sources (e.g., adding/removing application servers, adding/removing database connections, adding/removing docker containers).
 
 # Using it
-## Adding plugs
 
-* [Generic plugs parameters](docs/concepts/nAttrMon-Plugs)
-* [Examples of adding Inputs, Outputs or Validations](docs/howto/Examples)
-* [Existing base Inputs, Outputs or Validations (also known as objects)](reference/nAttrMon-Objects.md)
+Start by understanding:
 
-## Operational topics
+1. [The folder structure](docs/concepts/nAttrMon-folder-structure.md)
+2. [Examples of adding Inputs, Outputs or Validations](docs/howto/Examples)
+3. [The generic plugs parameters available](docs/concepts/nAttrMon-Plugs)
+4. [Existing base Inputs, Outputs or Validations (also known as objects)](reference/nAttrMon-Objects.md)
+
+# Operational topics
 
 * [Managing warnings](docs/howto/nAttrMon-Warnings)
 * [Interconnecting several nAttrMon's instances](docs/howto/nAttrMon-Interconnect)
