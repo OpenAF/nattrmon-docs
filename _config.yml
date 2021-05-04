@@ -4,3 +4,6 @@ title: nAttrMon docs
 description: nAttrMon guides, concepts and how-tos documentation.
 eading_anchors: true
 nav_sort: case_sensitive
+
+ga_tracking: G-PMDY021WRJ
+ga_tracking_anonymize_ip: true
