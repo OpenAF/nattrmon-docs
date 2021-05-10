@@ -77,3 +77,5 @@ output:
 Keep in mind that:
 * the _keyPassword_ is actually the Java Key Store (jks) password and not related with the key itself
 * the hostname provided must match the one used to access through HTTP (that's how Java will figure out the right certificate)
+
+For testing you can use the [InstallCert oPack functionality and the ow.java.setIgnoreSSLDomains function](https://docs.openaf.io/docs/guides/advanced/easily-add-ssl-cert.html).
