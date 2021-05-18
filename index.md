@@ -69,7 +69,7 @@ Start by understanding:
 2. [Examples of adding Inputs, Outputs or Validations](docs/howto/Examples)
 3. [The generic plugs parameters available](docs/concepts/nAttrMon-Plugs)
 4. [Existing base Inputs, Outputs or Validations (also known as objects)](docs/reference/nAttrMon-Objects.md)
-5. [Running as a oJob](docs/concepts/nAttrMon-oJob.md)
+5. [Running as single mode](docs/concepts/nAttrMon-oJob.md)
 
 # Operational topics
 
