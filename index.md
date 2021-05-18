@@ -68,7 +68,7 @@ Start by understanding:
 1. [The folder structure](docs/concepts/nAttrMon-folder-structure.md)
 2. [Examples of adding Inputs, Outputs or Validations](docs/howto/Examples)
 3. [The generic plugs parameters available](docs/concepts/nAttrMon-Plugs)
-4. [Existing base Inputs, Outputs or Validations (also known as objects)](reference/nAttrMon-Objects.md)
+4. [Existing base Inputs, Outputs or Validations (also known as objects)](docs/reference/nAttrMon-Objects.md)
 
 # Operational topics
 
