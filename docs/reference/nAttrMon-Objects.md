@@ -23,6 +23,7 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Input | nInput_IMAbnormalLoadings | RAID | Checks for IM loadings that didn't process the expected number of records. | 
 | Input | nInput_IMLoadingsProgress | RAID | Monitor the specified IM block types loading progress by number of runs, min, max, avg records processed, etc. |
 | Input | nInput_IMMemory | RAID | Returns the current RAID instance reported IM memory. |
+| Input | nInput_Kube_Events | Kubernetes | Tries to retrieve the current kubernetes events and map it to an attribute. |
 | Input | nInput_LogErrorAgg | OS | Given a regular expression pattern returns the number of occurrences of that pattern in specific files (useful to aggregate the count of Java exceptions on a log file, for example).  |
 | Input | nInput_OSInfo | OS | Returns the operating system load, load average, free, swap and commit memory. |
 | Input | nInput_RAIDMemory | RAID | Returns the current RAID instance reported memory. |
@@ -39,14 +40,20 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Output | [nOutput_DSV](outputs/nAttrMon-nOutput-DSV) | Output DSV | Outputs a specific set of attributes or warnings to DSV/CSV files per date with automatic housekeeping. | 
 | Output | [nOutput_EmailWarnings](outputs/nAttrMon-nOutput-EmailWarnings) | Output Warning | If there is any new level HIGH warning (or any other combination) it will send an email with it. |
 | Output | nOutput_H2 | Output History | Records the attribute values and warnings on a H2 database. |
+| Output | nOutput_HealthZ | Output HTTP | Adds a /healthz endpoint to nAttrMon. |
 | Output | nOutput_HTTP | Output HTTP | Provides a minimal HTTP interface to check attribute values, warnings and output history (if activated). |
+| Output | nOutput_HTTP_Metrics | Output HTTP | Adds a /metrics (OpenMetrics / Prometheus) endpoint to nAttrMon. |
 | Output | nOutput_HTTP_JSON | Output HTTP | Provides a JSON full dump of the current attribute, attribute values and warnings. |
+| Output | nOutput_HTTP_Status | Output HTTP | Provides a /status endpoint status page. |
+| Output | nOutput_HTMLStatus | Output HTTP | Produces a HTML status page. |
 | Output | nOutput_Log | Output Log | Outputs the current attribute values into a text log file. |
+| Out
 | Output | nOutput_Oracle | Output History | Records the attribute values and warnings on a Oracle database. |
 | Output | nOutput_Stdout | Output Log | Outputs the current attribute values into the stdout. |
 | Output | [nOutput_Channels](outputs/nAttrMon-nOutput-Channels) | Output Channels | Exposes several OpenAF channels with attributes, values, warnings and plugs plus access to operational functionality. |
 | Output | [nOutput_RemoteChannel](outputs/nAttrMon-nOutput-Channel) | Output Channel | Pushes attribute values to a remote nAttrMon or OpenAF script through an OpenAF channel. |
 | Output | [nOutput_Notifications](outputs/nAttrMon-nOutput-Notifications) | Output Warnings | Sends push notifications triggered by warnings. |
+| Output | nOutput_WarnsHistory | Output History | This output will keep an OpenAF channel with a history of changes in warning status. |
 | Output | nOutput_ES | Output ES | Outputs attribute values and warnings to an ElasticSearch cluster. |
 | Output | nOutput_Slack | Output Slack | Outputs warnings to Slack. |
 | Validation | [nValidation_Generic](validations/nAttrMon-nValidation-Generic) | Validation Generic | Simple generic validation for an attribute or any set of attribute patterns. |
