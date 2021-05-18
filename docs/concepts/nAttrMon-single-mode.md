@@ -55,7 +55,7 @@ init:
 
 ### nattrmon
 
-This __nattrmon map__ entry is an array of nAttrMon plugs. In here you can define as many input, validation and output plugs as you like. Each will follow the exact same structure as the [regular nAttrMon plug definition](docs/howto/Examples) for YAML files.
+This __nattrmon map__ entry is an array of nAttrMon plugs. In here you can define as many input, validation and output plugs as you like. Each will follow the exact same structure as the [regular nAttrMon plug definition](/docs/howto/Examples) for YAML files.
 
 ````yaml
 nattrmon: &NATTRMON
