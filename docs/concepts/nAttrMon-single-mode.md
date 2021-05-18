@@ -1,11 +1,11 @@
 ---
 layout: default
-title: oJob
+title: Single mode
 parent: Concepts
 grand_parent: nAttrMon docs
 ---
 
-# Single mode nAttrMon
+# Single mode
 
 ## nAttrmon daemon vs single mode
 
