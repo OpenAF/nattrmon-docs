@@ -93,11 +93,13 @@ There are other entries on the sample file for advance use. If you know oJob you
 To execute you have to ensure that nAttrMon oPack is installed on the OpenAF deployment you are using. Then simply execute:
 
 ````bash
-[path to OpenAF folder]/ojob myNAttrMonSingleMode.yaml 
+[path to OpenAF folder]/ojob myNAttrMonSingleMode.yaml NATTRMON_DIR=.
 ````
 
 To set it up on a crontab entry, edit crontab (_crontab -e_) and add something similar to:
 
 ````bash
-*/10 * * * *    [path to OpenAF folder]/ojob [path to single mode yaml]/myNAttrMonSingleMode.yaml 2>&1 >> [path to single mode yaml]/myNAttrMonSingleMode.out
+*/10 * * * *    [path to OpenAF folder]/ojob [path to single mode yaml]/myNAttrMonSingleMode.yaml NATTRMON_DIR=[path to single mode yaml] 2>&1 >> [path to single mode yaml]/myNAttrMonSingleMode.out
 ````
+
+> NOTE: If you don't specify NATTRMON_DIR it will default to the nAttrMon oPack folder. Any [NATTRMON_DIR]/config folders will also be considered for input, output and validation plugs. If ````__NAM_LOGCONSOLE=false```` then the logs will be created in [NATTRMON_DIR]/config/log.
