@@ -47,6 +47,7 @@ validation:
 | checks.attribute | String | Yes (if not defined checks.attrPattern) | The complete attribute name |
 | checks.attrPattern | RegExp | Yes (if not defined checks.attribute) | A regular expression to match attribute names |
 | checks.expr | String | Yes | A javascript conditional expression (using handlebars) to be evaluated to create/update a warning if true or close a warning if false. **If attrPattern is used it will be evaluated for each attribute that matches**. If the attribute value is an array this expression will be executed for each line and the "{{value}}" entry will correspond to each row. See available handlebars entries below that can be used. | 
+| checks.not | Boolean | No | If set to true the checks.expr evaluation will be reversed and will only create a warning if it's false (defaults to false). |
 | checks.warnLevel | String | No | Upon warning creation/update the level to use between INFO, LOW, MEDIUM and HIGH (defaults to INFO). |
 | checks.warnTitleTemplate | String | No | Upon warning creation/update the title template (handlebars) to use. See available handlebars entries below that can be used. |
 | checks.warnDescTemplate | String | No | Upon warning creation/update the description template (handlebars) to use. See available handlebars entries below that can be used. | 
