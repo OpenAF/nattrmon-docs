@@ -64,18 +64,18 @@ validation:
 
 | Template entry | Description |
 |:---------------|:------------|
-| {{value}} | The current attribute value (you can use {{value.c}} to access a specific map entry). If the attribute is an array it will have each array entry in several evaluations. | 
-| {{name}} | The name of the attribute |
-| {{dateAgo.seconds}} | If current attribute is a date how many seconds ago it was. |
-| {{dateAgo.minutes}} | If current attribute is a date how many minutes ago it was. |
-| {{dateAgo.hours}} | If current attribute is a date how many hours ago it was. |
-| {{dateAgo.days}} | If current attribute is a date how many days ago it was. |
-| {{modifiedAgo.seconds}} | How many seconds ago the attribute value changed. |
-| {{modifiedAgo.minutes}} | How many minutes ago the attribute value changed. |
-| {{modifiedAgo.hours}} | How many hours ago the attribute value changed. |
-| {{modifiedAgo.days}} | How many days ago the attribute value changed. |
-| {{dateModified}} | The date when the attribute was modified. |
-| {{originalValue}} | The current original attribute value. Even if the attribute value is an array it will return the original array. |
+| \{{value}} | The current attribute value (you can use {{value.c}} to access a specific map entry). If the attribute is an array it will have each array entry in several evaluations. | 
+| \{{name}} | The name of the attribute |
+| \{{dateAgo.seconds}} | If current attribute is a date how many seconds ago it was. |
+| \{{dateAgo.minutes}} | If current attribute is a date how many minutes ago it was. |
+| \{{dateAgo.hours}} | If current attribute is a date how many hours ago it was. |
+| \{{dateAgo.days}} | If current attribute is a date how many days ago it was. |
+| \{{modifiedAgo.seconds}} | How many seconds ago the attribute value changed. |
+| \{{modifiedAgo.minutes}} | How many minutes ago the attribute value changed. |
+| \{{modifiedAgo.hours}} | How many hours ago the attribute value changed. |
+| \{{modifiedAgo.days}} | How many days ago the attribute value changed. |
+| \{{dateModified}} | The date when the attribute was modified. |
+| \{{originalValue}} | The current original attribute value. Even if the attribute value is an array it will return the original array. |
 
 You can also use [nAttrMon generic template helpers](nAttrMon-template-helpers) to access other attribute values, previous attribute values, etc...
 
