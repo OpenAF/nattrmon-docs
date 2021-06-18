@@ -42,7 +42,7 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Output | nOutput_H2 | Output History | Records the attribute values and warnings on a H2 database. |
 | Output | nOutput_HealthZ | Output HTTP | Adds a /healthz endpoint to nAttrMon. |
 | Output | nOutput_HTTP | Output HTTP | Provides a minimal HTTP interface to check attribute values, warnings and output history (if activated). |
-| Output | nOutput_HTTP_Metrics | Output HTTP | Adds a /metrics (OpenMetrics / Prometheus) endpoint to nAttrMon. |
+| Output | [nOutput_HTTP_Metrics](outputs/nAttrMon-nOutput_HTTPMetrics.md) | Output HTTP | Adds a /metrics (OpenMetrics / Prometheus) endpoint to nAttrMon. |
 | Output | nOutput_HTTP_JSON | Output HTTP | Provides a JSON full dump of the current attribute, attribute values and warnings. |
 | Output | nOutput_HTTP_Status | Output HTTP | Provides a /status endpoint status page. |
 | Output | nOutput_HTMLStatus | Output HTTP | Produces a HTML status page. |
