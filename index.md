@@ -10,7 +10,7 @@ Welcome to the nAttrMon
 
 # Introduction
 
-nAttrMon (*n-Attribute-Monitor*) is basically a small open source generic imonitoring tool using [OpenAF](https://github.com/openaf/openaf). It's extensible through plugs (small editable files) divided into three categories: inputs, outputs and validations:
+nAttrMon (*n-Attribute-Monitor*) is basically a small open source generic monitoring tool, using [OpenAF](https://github.com/openaf/openaf). It's extensible through plugs (small editable files) divided into three categories: inputs, outputs and validations:
    * The *inputs* are responsible to gather unique attribute values.
    * The *validations* are responsible to analyze the attribute values and generate warnings and/or perform actions (e.g. self-healing).
    * The *outputs* are responsible to make attribute values and warnings available (e.g. HTTP, Email, Notification, etc...).
