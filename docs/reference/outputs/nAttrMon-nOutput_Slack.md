@@ -8,7 +8,7 @@ grand_parent: Reference
 
 This output will output warnings to a Slack webhook. Optionally you can specify a regular expression to filter by warning title, a warning level and if the slack message should use simple API or not.
 
-# Example of use of the execArgs
+## Example of use of the execArgs
 
 ````yaml
 output:
