@@ -1,3 +1,10 @@
+---
+layout: default
+title: Adding a new plug object to nAttrMon
+parent: How To
+grand_parent: nAttrMon docs
+---
+
 # Adding a new plug object to nAttrMon
 
 In nAttrMon you have input, output and validation plugs. Althought theses plugs can have their own code the best pratice is to use the input, output and validation plug definition to use a specific existing object plug and then simply provide the necessary arguments. For example, to run a command and use the output as a monitoring metric you just need to define an input plug like this:
