@@ -200,13 +200,102 @@ input:
 
 ### Pool parameters
 
-_tbc_
+On the parameters to define the keys of some types you can also have object-pool parameters:
+
+````yaml
+# ...
+input:
+  name    : My first init plug
+  execFrom: nAttrMon_Init
+  execArgs:
+    # AF is the type for RAID servers
+    AF:
+      rasServers:
+      - key   : RAS Server 1
+        <<    : *SECRETS
+        secKey: ras_server_1
+        pool  :
+          max: 3
+# ...
+````
+
+The current list of types on which you can use the pool parameters is:
+
+* AF
+* DB
+* SSH
+
+The pool parameters list available is:
+
+| Parameter    | Type   | Default | Description |
+|--------------|--------|---------|-------------|
+| max          | Number | 0       | Sets the maximum number of connections that should be kept open in the pool. |
+| min          | Number | 0       | Sets the minimum number of connections that should be kept open in the pool. |
+| retry        | Number | 10      | When the maximum number of connections is reached the request will be retried again a _retry_ number of times before failing. |
+| timeout      | Number | 2000    | When the maximum number of connections is reached the request will be retried for _retry_ number of attemps. _timeout_ defines the number of ms to wait between retries before failing. |
+| incrementsOf | Number | 1       | While the max is not reached if there is a need to increase the number of connections this number defines how many new connections should be created. |
+| keepalive    | Number |         | When defined a "keep-alive" operation will be performed for every non-used connections with the provided ms time. |
 
 ### AF type parameters
 
-_tbc_
+The AF type is used to connect to RAID servers. The type specific parameters that can be used for each defined key are:
+
+| Parameter          | Type    | Mandatory? | Description                                                    |
+|--------------------|---------|------------|----------------------------------------------------------------|
+| key                | String  | Yes        | The unique key that represents access to a RAID server         |
+| url                | String  | Yes        | The OpenAF's OpenCli RAID URL to use (you should retrieve this parameter from a secret) |
+| timeout            | Number  | No         | The timeout in ms for each operation                           |
+| conTimeout         | Number  | No         | The connection timeout, in ms.                                 |
+| dontUseTransaction | Boolean | No         | If _true_ will force the use of non-transaction calls to RAID. | 
+
+### AF Cache type parameters
+
+Some nAttrMon's inputs for RAID AF connections allow you to cache previous results of other inputs that eventually execute the same AF operation. If more than one input are using the results of the same AF operation (and parameters) this would make it faster to input several metrics. 
+
+````yaml
+# ...
+input:
+  name    : My first init plug
+  execFrom: nAttrMon_Init
+  execArgs:
+    # AF is the type for RAID servers
+    AF:
+      rasServers:
+      - key   : RAS Server 1
+        <<    : *SECRETS
+        secKey: ras_server_1
+
+    AFCache:
+      rasCache:
+      - key: RAS Server 1
+        ttl: 2500
+# ...
+````
+
+> Usually keys, independently of type, should usually be unique. For AFCache is exactly the opposite. To make it easier to understand/read the
+key should be exactly equal to the AF server to which it refers to.
+
+The type specific parameters are:
+
+| Parameter | Type   | Mandatory? | Description                                    |
+|-----------|--------|------------|------------------------------------------------|
+| key       | String | Yes        | The AF key to which the cache relates to.      |
+| ttl       | Number | Yes        | The TTL for the operations results to be kept. |
 
 ### DB type parameters
+
+The DB type is used to connect to JDBC-based database services. The type specific parameters that can be used for each defined key are:
+
+| Parameter | Type    | Mandatory? | Description                                                                           |
+|-----------|---------|------------|---------------------------------------------------------------------------------------|
+| key       | String  | Yes        | The unique key that represents access to a RAID server                                |
+| driver    | String  | No         | The JDBC driver to use. If not defined OpenAF will try to determine it from the _url_ |
+| url       | String  | Yes        | The complete JDBC url to use (you should retrieve this parameter from a secret)       |
+| login     | String  | Yes        | The database login (you should retrieve this parameter from a secret)                 |
+| pass      | String  | Yes        | The database password (you should retrieve this parameter from a secret)              |
+| timeout   | Number  | No         | If defined determines the connection timeout in ms                                    |
+
+### DB type key associations
 
 _tbc_
 
