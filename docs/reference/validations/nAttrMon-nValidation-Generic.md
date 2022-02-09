@@ -19,24 +19,24 @@ validation:
    execArgs     :
       checks:
          - attrPattern      : test$
-           expr             : {{value}} < 200 && {{value}} >= 100
+           expr             : \{{value}} < 200 && \{{value}} >= 100
            warnLevel        : HIGH
            warnTitleTemplate: A test warning
            warnDescTemplate : This is just a test warning. 
            healing          :
               execArgs         :
-                 key: "{{value}}"
+                 key: "\{{value}}"
               execOJob         : /some/path/config/ojobs/healProblem.yaml
               #exec             : "sh('/some/path/config/shs/healProblem.sh ' + args.key)"
               warnLevel        : HIGH
               warnTitleTemplate: "Heal failed"
-              warnDescTemplate : "Heal for {{value}} failed with exception {{exception}}-"
+              warnDescTemplate : "Heal for \{{value}} failed with exception \{{exception}}-"
    
          - attribute        : test3
-           expr             : {{value.c}} == 3
+           expr             : \{{value.c}} == 3
            warnLevel        : INFO
            warnTitleTemplate: A test info warning
-           warnDescTemplate : This is just a info given {{name}} because the values was {{value}} for '{{map.a}}'.  
+           warnDescTemplate : This is just a info given \{{name}} because the values was \{{value}} for '\{{map.a}}'.  
 ````
 
 ## Description of execArgs
@@ -92,16 +92,16 @@ validation:
    execArgs     :
       checks:
          - attribute        : Server status/Ping
-           expr             : "{{value.Alive}} == false"
+           expr             : "\{{value.Alive}} == false"
            warnLevel        : HIGH
-           warnTitleTemplate: "Server{{value.Name}} down"
-           warnDescTemplate : "A ping to the {{value.Name}} server failed. The server could be down or not responsive. Check the server status and restart if needed."
+           warnTitleTemplate: "Server \{{value.Name}} down"
+           warnDescTemplate : "A ping to the \{{value.Name}} server failed. The server could be down or not responsive. Check the server status and restart if needed."
    
          - attribute        : Server status/Ping
-           expr             : "{{value.Alive}} == true"
+           expr             : "\{{value.Alive}} == true"
            warnLevel        : INFO
-           warnTitleTemplate: "RAID {{value.Name}} up"
-           warnDescTemplate : "The {{value.Name}} server is responding as expected appearing to be up."
+           warnTitleTemplate: "RAID \{{value.Name}} up"
+           warnDescTemplate : "The \{{value.Name}} server is responding as expected appearing to be up."
 ````
 
 Using a compare timestamps input where the attribute value map has spaces:
@@ -116,10 +116,10 @@ validation:
    execArgs     : 
       checks: 
          - attribute        : Server status/Compare timestamps
-           expr             : "{{value.[db.abc diff (min)]}} >= 5 || {{value.[db.xyz diff (min)]}} >= 5"
+           expr             : "\{{value.[db.abc diff (min)]}} >= 5 || \{{value.[db.xyz diff (min)]}} >= 5"
            warnLevel        : MEDIUM
            warnTitleTemplate: "Database/App time difference"
-           warnDescTemplate : "The current difference of time between the application instance {{value.key}} and the database is of {{value.[db.abc diff (min)]}} min (abc) and {{value.[db.xyz diff (min)]}} min (xyz)"
+           warnDescTemplate : "The current difference of time between the application instance \{{value.key}} and the database is of \{{value.[db.abc diff (min)]}} min (abc) and \{{value.[db.xyz diff (min)]}} min (xyz)"
 ````
 
 Using other dates on attributes with map values (this map has a column with warningDate and warningText) and alarming if warningDate longer than 1 minute but less than one day:
@@ -134,10 +134,10 @@ validation:
    execArgs     : 
       checks: 
          - attribute        : Database/ABC
-           expr             : "{{owFormat_dateDiff_inMinutes (owFormat_toDate value.warningDate 'yyyy-MM-dd HH:mm:ss.S')}} > 1 && {{owFormat_dateDiff_inDays (owFormat_toDate value.warningDate 'yyyy-MM-dd HH:mm:ss.S')}} < 1"
+           expr             : "\{{owFormat_dateDiff_inMinutes (owFormat_toDate value.warningDate 'yyyy-MM-dd HH:mm:ss.S')}} > 1 && \{{owFormat_dateDiff_inDays (owFormat_toDate value.warningDate 'yyyy-MM-dd HH:mm:ss.S')}} < 1"
            warnLevel        : HIGH
-           warnTitleTemplate: "Alarm {{value.warningText}} error"
-           warnDescTemplate : "The alarm {{value.warningText}} has reached and surpassed the defined warning date: {{owFormat_toDate value.warningDate 'yyyy-MM-dd HH:mm:ss.S'}}."
+           warnTitleTemplate: "Alarm \{{value.warningText}} error"
+           warnDescTemplate : "The alarm \{{value.warningText}} has reached and surpassed the defined warning date: \{{owFormat_toDate value.warningDate 'yyyy-MM-dd HH:mm:ss.S'}}."
 ````
 
 Comparing current value with previous values with default values if doesn't exist (e.g. generate a warning if the attribute value is not older than 1 day and the current value of the "ABC count" (defaults to 0 if no value is found) - the previous value is bigger than 0 (defaults to the current value and 0 if a previous value doesn't exist):
@@ -153,8 +153,8 @@ validation:
       checks:
          - attribute        : Database/ABC count
            expr             : >
-               {{modifiedAgo.days}} < 1 && 
-               ({{cval 'Database/ABC count' 'val' '0'}} - {{lval 'Database/ABC count' 'val' (cval 'Database/ABC count' 'val' '0')}}) > 0
+               \{{modifiedAgo.days}} < 1 && 
+               (\{{cval 'Database/ABC count' 'val' '0'}} - \{{lval 'Database/ABC count' 'val' (cval 'Database/ABC count' 'val' '0')}}) > 0
            warnLevel        : HIGH
            warnTitleTemplate: Entries on the error table
            warnDescTemplate : There are errors tracked yesterday in ABC table
