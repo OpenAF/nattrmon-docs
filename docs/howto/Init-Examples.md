@@ -4,6 +4,9 @@ title: Servers init example
 parent: How To
 grand_parent: nAttrMon docs
 ---
+
+(this is an old example. Please check how to use [nInput_Init](/docs/concepts/nAttrMon-nInput_Init) instead)
+
 # Servers init example
 
 ````javascript
