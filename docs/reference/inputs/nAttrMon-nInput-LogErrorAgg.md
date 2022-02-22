@@ -4,6 +4,7 @@ title: LogErrorAgg
 parent: Inputs
 grand_parent: Reference
 ---
+# nInput LogErrorAgg
 
 _tbc_
 

@@ -4,6 +4,7 @@ title: OSInfo
 parent: Inputs
 grand_parent: Reference
 ---
+# nInput OSInfo
 
 _tbc_
 

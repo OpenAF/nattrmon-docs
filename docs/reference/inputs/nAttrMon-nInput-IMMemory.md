@@ -4,3 +4,4 @@ title: IMMemory
 parent: Inputs
 grand_parent: Reference
 ---
+# nInput IMMemory

@@ -6,6 +6,9 @@ grand_parent: Reference
 ---
 # nInput CBPMDebugChecks
 
+**From**: https://github.com/OpenAF/nattrmon-configs\
+**oPack**: _OpenCli_
+
 This input will retrieve the database and memory debug levels for CBPM flows. It's intended to be used to alert for full debug situations.
 
 Example of use of the execArgs:

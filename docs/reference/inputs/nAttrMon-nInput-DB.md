@@ -4,6 +4,7 @@ title: DB
 parent: Inputs
 grand_parent: Reference
 ---
+# nInput DB
 
 _tbc_
 

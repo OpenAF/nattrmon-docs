@@ -4,3 +4,4 @@ title: CompareTimes
 parent: Inputs
 grand_parent: Reference
 ---
+# nInput CompareTimes

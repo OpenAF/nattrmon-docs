@@ -4,6 +4,7 @@ title: FMSRuleStatus
 parent: Inputs
 grand_parent: Reference
 ---
+# nInput FMSRuleStatus
 
 _tbc_
 

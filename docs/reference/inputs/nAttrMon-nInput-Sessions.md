@@ -4,6 +4,10 @@ title: Sessions
 parent: Inputs
 grand_parent: Reference
 ---
+# nInput Sessions
+
+**From**: https://github.com/OpenAF/nattrmon-configs\
+**oPack**: _OpenCli_
 
 _tbc_
 

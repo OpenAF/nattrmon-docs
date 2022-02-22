@@ -4,7 +4,10 @@ title: AFPing
 parent: Inputs
 grand_parent: Reference
 ---
-# nInput_AFPing
+# nInput AFPing
+
+**From**: https://github.com/OpenAF/nattrmon-configs\
+**oPack**: _OpenCli_
 
 This input will send an AF Ping operation to the designated RAID servers effectively determining if the RAID server is able to process the request and reply despite having the endpoint up.
 
