@@ -37,6 +37,7 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Input | nInput_CompareTimes | OS | Compares the time difference between a RAID application server and corresponding connected databases. |
 | Input | nInput_DMPerformance | RAID | Measure performance of Data Model queries vs direct database SQL queries. |
 | Input | nInput_EndPoints | OS | Check if a port or http endpoint si reachable within certain criteria (e.g. timeout, response, ...) |
+| Output | [nOutput_AWSCloudWatch](outputs/nAttrMon-nOutput-AWSCloudWatch) | Output AWSCloudWatch | Outputs a specific set of attribute metrics to the AWS CloudWatch service. |
 | Output | [nOutput_DSV](outputs/nAttrMon-nOutput-DSV) | Output DSV | Outputs a specific set of attributes or warnings to DSV/CSV files per date with automatic housekeeping. | 
 | Output | [nOutput_EmailWarnings](outputs/nAttrMon-nOutput-EmailWarnings) | Output Warning | If there is any new level HIGH warning (or any other combination) it will send an email with it. |
 | Output | nOutput_H2 | Output History | Records the attribute values and warnings on a H2 database. |
