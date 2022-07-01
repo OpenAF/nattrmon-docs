@@ -35,11 +35,15 @@ Afterwards you will need to add some input, output and validation plugs covered 
 oaf -f nattrmon.js
 ````
 
-Alternatevily you can create a start script be executing:
+Alternatively you can create a start script be executing:
 
 ````bash
 opack script nattrmon
 ````
+
+## Get the latest and previous releases
+
+All latest and previous releases can be checked in [GitHub nAttrMon releases](https://github.com/OpenAF/nAttrMon/releases).
 
 # Source
 
