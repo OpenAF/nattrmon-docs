@@ -37,3 +37,4 @@ the\OpenAF\folder\oaf -f nattrmon.js
 
 To limit memory you need to decide the base (Xms) and the maximum (Xmx) memory settings to use. These values will different depending on the inputs, validations and outputs configured in nAttrMon. So the best way is to actually measure it first and then trying to limit (Xmx) with different values giving some "slack".
 
+You can measure the internal nAttrMon Java heap by temporarially adding the [input nAttrMon](../../reference/inputs/nAttrMon-nInput-nAttrMon.md).
