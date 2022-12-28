@@ -19,6 +19,7 @@ input:
     keys   :
       - Server A
     bestOf : 3
+    withAssociatedDB: false
     queries:
       Chart 1: 
         SelectedFields:
@@ -44,5 +45,6 @@ input:
 | chKeys | Channel | Yes or keys | Similar to keys but uses an OpenAF channel to dynamically determine the keys. |
 | bestOf | Number | No | The number of times to repeat both DataModel and database queries to ensure cache is used (default to 1). |
 | queries | Map | Yes | A map of queries to perform. Each query entry should correspond to a DataModel query map. Tip: use the JSON params entry from the corresponding DM.PrepareQuery directly (if you want to convert to YAML just copy+paste to an OpenAF console and execute ```af.toYAML([copy+paste])```) |
+| withAssociatedDB | Boolean | No | Variable to control if associated DB object should also be used in order to compare DB query execution time vs DataModel execution time (defaults to True) |
 
 *To Do: adding query execution in parallel to better mimic the eventual performance issues in some cases.*
