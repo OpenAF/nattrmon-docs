@@ -75,9 +75,9 @@ input:
       CH:
       - name   : kubeJMXs
         entries:
-        - key  : "JMX {{metadata.name}}"
+        - key  : "JMX {% raw %}{{metadata.name}}{% endraw %}"
           value:
-            url  : "service:jmx:rmi:///jndi/rmi://{{status.podIP}}:9999/jmxrmi"
+            url  : "service:jmx:rmi:///jndi/rmi://{% raw %}{{status.podIP}}{% endraw %}:9999/jmxrmi"
         _kube:
           selector:
             where:
