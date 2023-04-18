@@ -159,7 +159,7 @@ After defining these sets of servers/services on other nAttrMon input plugs you 
 *nInput_AFPing examples:*
 ````yaml
 # 01.ping.ras.yaml
-input: 	
+input:
    name         : Ping RAS servers
    cron         : "*/1 * * * *"
    waitForFinish: true
@@ -170,7 +170,7 @@ input:
 
 ````yaml
 # 01.ping.fms.yaml
-input: 	
+input:
    name         : Ping FMS servers
    cron         : "*/1 * * * *"
    waitForFinish: true
@@ -184,7 +184,7 @@ input:
 *nInput_DB example:*
 
 ````yaml
-input: 	
+input:
    name         : My database queries
    cron         : "*/30 * * * * *"
    waitForFinish: true
