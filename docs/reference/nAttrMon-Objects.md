@@ -16,6 +16,7 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Input | nInput_CBPMSemaphores | RAID | Checks the values of RAID's instance semaphores. |
 | Input | nInput_DB | DB | Executes a SQL query and returns the result as input. |
 | Input | [nInput_EndPoints](inputs/nAttrMon-nInput-EndPoints) | OS | Test for reachability/expected availability of HTTP(s) URLs or TCP ports. |
+| Input | [nInput_JMX](inputs/nAttrMon-nInput-JMX.md) | JMX | Collects JMX beans metrics from a defined Java target. | 
 | Input | nInput_FMSRuleStatus | RAID | Gets each RAID FMS engine rule status (active, inactive, inactive by anti-flooding) |
 | Input | nInput_Filesystem | OS | Per unix mount point gets the total, used, free and % used space and inode totals (locally or remotely). |
 | Input | nInput_FilesystemCount | OS | Per filepath and filename regular expression filter, returns the total count and size, the min, max and avg size of existing files, the date of the newest file and oldest file (locally or remotely). |
@@ -43,7 +44,7 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 | Output | nOutput_H2 | Output History | Records the attribute values and warnings on a H2 database. |
 | Output | nOutput_HealthZ | Output HTTP | Adds a /healthz endpoint to nAttrMon. |
 | Output | nOutput_HTTP | Output HTTP | Provides a minimal HTTP interface to check attribute values, warnings and output history (if activated). |
-| Output | [nOutput_HTTP_Metrics](outputs/nAttrMon-nOutput_HTTPMetrics.md) | Output HTTP | Adds a /metrics (OpenMetrics / Prometheus) endpoint to nAttrMon. |
+| Output | [nOutput_HTTP_Metrics](outputs/nAttrMon-nOutput_HTTP_Metrics.md) | Output HTTP | Adds a /metrics (OpenMetrics / Prometheus) endpoint to nAttrMon. |
 | Output | nOutput_HTTP_JSON | Output HTTP | Provides a JSON full dump of the current attribute, attribute values and warnings. |
 | Output | nOutput_HTTP_Status | Output HTTP | Provides a /status endpoint status page. |
 | Output | nOutput_HTMLStatus | Output HTTP | Produces a HTML status page. |
