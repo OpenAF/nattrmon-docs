@@ -1,11 +1,11 @@
 ---
 layout: default
-title: HTTPMetrics
+title: HTTP_Metrics
 parent: Outputs
 grand_parent: Reference
 ---
 
-# nOutput HTTPMetrics
+# nOutput HTTP_Metrics
 
 Publishes internal nAttrMon metrics (self) and, optionally, the input monitored metric values (current and previous) and validation warnings in [OpenMetrics](https://openmetrics.io/) (keeping compatibility with the Prometheus format).
 
