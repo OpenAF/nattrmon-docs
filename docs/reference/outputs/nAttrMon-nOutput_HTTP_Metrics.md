@@ -57,10 +57,18 @@ output:
 | chPeriod | Number | No | If _chName_ is defined determines the period of time, in ms, use internally to collect metrics into the defined OpenAF's channel (default is 5000 ms). |
 | host | Number | No | _tbc_ |
 | port | Number | No | _tbc_ |
-| keyStore | String | No | _tbc_ |
-| keyPassword | String | No | _tbc_ |
 | audit | Boolean | No | _tbc_ |
 | auditTemplate | String | No | _tbc_ |
-| auth | _tbc_ | _tbc_ | _tbc_ |
-| authLocal | _tbc_ | _tbc_ | _tbc_ | 
-| authCustom | _tbc_ | _tbc_ | _tbc_ | 
+| keyStore | String | No | see more in [https](../../guides/medium/output_https.md) |
+| keyPassword | String | No | see more in [https](../../guides/medium/output_https.md) |
+| authType | String | No | see more in [basic or custom authentication](../../guides/medium/output_https_withBasicAuth.html) |
+| authLocal | Map | No | see more in [basic or custom authentication](../../guides/medium/output_https_withBasicAuth.html)  | 
+| authCustom | String | No | see more in [basic or custom authentication](../../guides/medium/output_https_withBasicAuth.html) | 
+
+## HTTP server
+
+_tbc_
+
+## HTTPS & Authentication
+
+This HTTP plug supports, as other HTTP plugs, [basic or custom authentication](../../guides/medium/output_https_withBasicAuth.html) and [https](../../guides/medium/output_https.md)
