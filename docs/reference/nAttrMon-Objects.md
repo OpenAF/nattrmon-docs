@@ -46,7 +46,7 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 
 |       Type | Name                                                                      | Repository              | Category             |
 | ----------:| ------------------------------------------------------------------------- | ----------------------- | -------------------- |
-|     Output | [nOutput_AWSCloudWatch](outputs/nAttrMon-nOutput-AWSCloudWatch)           | openaf/nattrmon         | Output AWSCloudWatch | 
+|     Output | [nOutput_AWSCloudWatch](outputs/nAttrMon_nOutput_AWSCloudWatch)           | openaf/nattrmon         | Output AWSCloudWatch | 
 |     Output | [nOutput_DSV](outputs/nAttrMon-nOutput-DSV)                               | openaf/nattrmon         | Output DSV           | 
 |     Output | [nOutput_EmailWarnings](outputs/nAttrMon-nOutput-EmailWarnings)           | openaf/nattrmon         | Output Warning       | 
 |     Output | [nOutput_H2](outputs/nAttrMon-nOutput-H2.md)                              | openaf/nattrmon         | Output History       | 
