@@ -82,21 +82,3 @@ Start by understanding:
 * [Managing warnings](docs/howto/nAttrMon-Warnings)
 * [Interconnecting several nAttrMon's instances](docs/howto/nAttrMon-Interconnect)
 * [Auditing](docs/howto/nAttrMon-Auditing)
-
-----
-
-<button class="btn js-toggle-dark-mode">dark color scheme</button>
-
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === 'dark') {
-    jtd.setTheme('light');
-    toggleDarkMode.textContent = 'dark color scheme';
-  } else {
-    jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'light color scheme';
-  }
-});
-</script>
