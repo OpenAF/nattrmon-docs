@@ -49,7 +49,7 @@ output:
 | sessionToken | String | No | The AWS API session token with permissions to put metrics in AWS CloudWatch |
 | debug | Boolean | No | Shows additional information logs in case of error |
 
-> (*) The list of units by metric, according with AWS documentations, is: econds | Microseconds | Milliseconds | Bytes | Kilobytes | Megabytes | Gigabytes | Terabytes | Bits | Kilobits | Megabits | Gigabits | Terabits | Percent | Count | Bytes/Second | Kilobytes/Second | Megabytes/Second | Gigabytes/Second | Terabytes/Second | Bits/Second | Kilobits/Second | Megabits/Second | Gigabits/Second | Terabits/Second | Count/Second | None
+> (*) The list of units by metric, according with AWS documentations, is: Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, None
 
 > Note: The _accessKey_, _secretKey_ and _sessionToken_ are used with the oPack AWS. So they might be required or not depending where nAttrMon is running and which AWS roles are associated. If not defined it will default to other role-based AWS authentication mechanisms.
 
