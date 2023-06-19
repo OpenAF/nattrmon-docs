@@ -1,0 +1,43 @@
+name: Update counters
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  update-counters:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+    # --------------------------
+    - name: Cache OpenAF runtime
+      uses: actions/cache@v1.2.1
+      with:
+        key : oaf-nightly
+        path: /tmp/oaf  
+
+    # -------------------------
+    - uses: actions/checkout@v3
+
+    # ---------------------
+    - name: Update counters
+      uses: openaf/ojob-action@v4
+      with:
+        dist: nightly
+        ojob: .github/ojobs/updateCounters.yaml
+    
+    # --------------------
+    - name: Commit changes
+      env :
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: openaf/ojob-action@v4
+      with:
+        ojob: 'ojob.io/git/hub/contentIn'
+        args: 'message="Update\ counters" paths=".github"'
+        dist: nightly

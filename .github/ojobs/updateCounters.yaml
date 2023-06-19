@@ -1,0 +1,89 @@
+todo:
+- Update badge with number guides
+- Update badge with number howto
+- Update badge with number concepts
+- Update badge with number reference
+
+ojob:
+  opacks:
+  - Badgen
+
+include:
+- badgen.yaml
+
+jobs:
+# -------------------------------------
+- name: Update badge with number guides
+  to  :
+  - name: Badgen generate file
+    args: 
+      labelColor: grey3
+      color     : blue
+      icon      : "nattrmon_grey.svg"
+      label     : "Guides"
+      file      : ".github/guides.svg"
+  exec: |
+    var res = $from( listFilesRecursive("docs/guides") )
+              .equals("isFile", true)
+              .ends("filename", ".md")
+              .notEquals("filename", "index.md")
+              .count()
+
+    args.status = "#" + res 
+
+# ------------------------------------
+- name: Update badge with number howto
+  to  :
+  - name: Badgen generate file
+    args: 
+      labelColor: grey3
+      color     : blue
+      icon      : "nattrmon_grey.svg"
+      label     : "How To"
+      file      : ".github/howto.svg"
+  exec: |
+    var res = $from( listFilesRecursive("docs/howto") )
+              .equals("isFile", true)
+              .ends("filename", ".md")
+              .notEquals("filename", "index.md")
+              .count()
+
+    args.status = "#" + res 
+
+# ---------------------------------------
+- name: Update badge with number concepts
+  to  :
+  - name: Badgen generate file
+    args: 
+      labelColor: grey3
+      color     : blue
+      icon      : "nattrmon_grey.svg"
+      label     : "Concepts"
+      file      : ".github/concepts.svg"
+  exec: |
+    var res = $from( listFilesRecursive("docs/concepts") )
+              .equals("isFile", true)
+              .ends("filename", ".md")
+              .notEquals("filename", "index.md")
+              .count()
+
+    args.status = "#" + res 
+
+# ----------------------------------------
+- name: Update badge with number reference
+  to  :
+  - name: Badgen generate file
+    args: 
+      labelColor: grey3
+      color     : blue
+      icon      : "nattrmon_grey.svg"
+      label     : "Reference"
+      file      : ".github/reference.svg"
+  exec: |
+    var res = $from( listFilesRecursive("docs/reference") )
+              .equals("isFile", true)
+              .ends("filename", ".md")
+              .notEquals("filename", "index.md")
+              .count()
+
+    args.status = "#" + res 
