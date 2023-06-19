@@ -39,5 +39,5 @@ jobs:
       uses: openaf/ojob-action@v4
       with:
         ojob: 'ojob.io/git/hub/contentIn'
-        args: 'message="Update\ counters" paths=".github"'
+        args: 'message="Update\ counters" paths=".github/"'
         dist: nightly
