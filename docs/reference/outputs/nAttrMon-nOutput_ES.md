@@ -14,11 +14,11 @@ Each attribute value will be converted to a structure similar to:
 
 ```json
 {
-  name: "The name of the attribute",
-  date: 1234-12-24T23:12:34.123Z,
-  id  : "unique-id-hash-based",
-  _id : "the-same-as-id",
-  The_name_of_the_attribute: { ... }
+  "name": "The name of the attribute",
+  "date": 1234-12-24T23:12:34.123Z,
+  "id"  : "unique-id-hash-based",
+  "_id" : "the-same-as-id",
+  "The_name_of_the_attribute": { ... }
 }
 ```
 
