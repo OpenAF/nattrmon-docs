@@ -36,10 +36,10 @@ The order is ```1 2 3 4 5 6``` (second, minute, hour, day of month, month and da
 
 ## Examples
 
-* "*/5 * * * * *" - Runs every 5 seconds
-* "10 8 * * *" - Runs at 8:10am every day
-* "0 */1 * * *"  - Runs every hour
-* "30 2 * * 0,6" - Runs at 2:30am every weekend
+* ```*/5 * * * * *``` - Runs every 5 seconds
+* ```10 8 * * *``` - Runs at 8:10am every day
+* ```0 */1 * * *```  - Runs every hour
+* ```30 2 * * 0,6``` - Runs at 2:30am every weekend
 
 ## How to test
 
