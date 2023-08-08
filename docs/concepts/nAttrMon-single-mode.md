@@ -13,7 +13,7 @@ The usual nAttrMon running mode is to be launched as a daemon/service. But there
 
 When nAttrMon is running as a daemon:
 
-* Several **input plugs** will be running at specific time intervals or following a cron expression or being triggered some other way (e.g. channel subscription in more advanced setups)
+* Several **input plugs** will be running at specific time intervals or following a [cron expression](/docs/guides/beginner/nattrmon-cron.md) or being triggered some other way (e.g. channel subscription in more advanced setups)
 * Whenever these input plugs produce an output, **output plugs** will be executed to handle that result. 
 * If there is also **validation plugs** they will also be executed to handle the input plug's results eventually producing warnings that will also trigger specific outputs to deal with those warnings (e.g. sending an email with a list of warnings).
 * Execution continues waiting for **input plugs** to execute when needed.

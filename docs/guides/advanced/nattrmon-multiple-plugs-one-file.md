@@ -34,11 +34,11 @@ input:
            WHERE control in ('A', 'B', 'C')
 ````
 
-In this example both queries will execute every 10 minutes. But you might want different cron schedules temporarily to find some issue on ABC controls. 
+In this example both queries will execute every 10 minutes. But you might want different [cron schedules](/docs/guides/beginner/nattrmon-cron.md) temporarily to find some issue on ABC controls. 
 
 Usually you would create two files, comment the ABC query on the first and just have the ABC on the second. But now if you have to quickly ignore all database queries you will have to remember the extra temporary plug you created before. Could there be a better alternative?
 
-The answer is yes. You can keep both SQLs on the same file and temporarily have different cron settings:
+The answer is yes. You can keep both SQLs on the same file and temporarily have different [cron settings](/docs/guides/beginner/nattrmon-cron.md):
 
 
 ````yaml

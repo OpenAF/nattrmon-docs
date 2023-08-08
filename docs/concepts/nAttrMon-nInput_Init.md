@@ -16,7 +16,7 @@ For the different types of plugs the need to initialize common functionality is 
 
 If you need to perform multiple database queries, with different schedules, you are going to need multiple [database query input plugs](/docs/reference/inputs/nAttrMon-nInput-DB) probably sharing the same database credentials and access information.
 
-Let's imagine that you have 3 nInput_DB plugs each with 4 queries. Even if they all have different cron schedules there might be certain points in a day that 2 or 3 of theses plugs are running at the same time. So in order to avoid establishing 4 * 3 = 12 database connections and adding load and/or impacting the database nAttrMon allows you to create database ***object pools*** with a maximum number of connections (among other parameters). 
+Let's imagine that you have 3 nInput_DB plugs each with 4 queries. Even if they all have different [cron schedules](/docs/guides/beginner/nattrmon-cron.md) there might be certain points in a day that 2 or 3 of theses plugs are running at the same time. So in order to avoid establishing 4 * 3 = 12 database connections and adding load and/or impacting the database nAttrMon allows you to create database ***object pools*** with a maximum number of connections (among other parameters). 
 
 In our example if you configure to have a maximum of 3 connections whenever a new connection is requested to nAttrMon to perform a new database query that request will _wait_ until one of the other 3 connections is free and can be eventually reuse it also avoiding the time to reestablish a new connection. This applies to a broad categories of connections to different types of services or servers and it's a built-in functionality of nAttrMon.
 
