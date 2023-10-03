@@ -42,7 +42,7 @@ output:
       #accessKey: minio
       #secret   : minio123
       bucket   : logs
-      prefix   : "monitoring/logs/{{owFormat_fromDate now 'yyyyMMdd'}}/"
+      prefix   : "monitoring/logs/{% raw %}{{owFormat_fromDate now 'yyyyMMdd'}}{% endraw %}/"
 ````
 
 ## Description of execArgs
