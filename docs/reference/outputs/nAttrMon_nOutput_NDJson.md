@@ -101,4 +101,4 @@ Be mindfull of the _folder_ you set to ensure enough space is available. The def
 * Choose the _fileDateFormat_ wisely to avoid large amounts of files retained. If necessary using the _s3sync_ is a better alternative than leaving the files on a regular filesystem.
 * Keep the default option for compression. NDJSON files traditionally have a high degree of compression.
 * When pushing files using _s3sync_ it's a good practice to set a retention period on the bucket + path used. 
-* You can use the templating functionality for the prefix to change it daily (e.g. "logs/{% raw %}{{owFormat_fromDate now 'yyyyMMdd'}}{% endraw %}/") or even use environment variables to set it (e.g. "{% raw %}{{$env 'LOGFOLDER'}}{% endraw }/")
+* You can use the templating functionality for the prefix to change it daily (e.g. "logs/{% raw %}{{owFormat_fromDate now 'yyyyMMdd'}}{% endraw %}/") or even use environment variables to set it (e.g. "{% raw %}{{$env 'LOGFOLDER'}}{% endraw %}/")
