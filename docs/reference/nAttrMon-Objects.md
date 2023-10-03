@@ -57,6 +57,7 @@ The following is a list of the current objects base for Inputs, Outputs and Vali
 |     Output | nOutput_HTTP_Status                                                       | openaf/nattrmon         | Output HTTP          |
 |     Output | [nOutput_HTMLStatus](outputs/nAttrMon-nOutput_HTMLStatus.md)              | openaf/nattrmon         | Output HTTP          | 
 |     Output | [nOutput_Log](outputs/nAttrMon-nOutput_Log.md)                            | openaf/nattrmon         | Output Log           | 
+|     Output | [nOutput_NDJson](outputs/nAttrMon-nOutput_NDJson.md)                      | openaf/nattrmon         | Output Log           | 
 |     Output | [nOutput_Oracle](outputs/nAttrMon-nOutput_Oracle.md)                      | openaf/nattrmon         | Output History       | 
 |     Output | [nOutput_Stdout](outputs/nAttrMon-nOutput_Stdout.md)                      | openaf/nattrmon         | Output Log           | 
 |     Output | [nOutput_Channels](outputs/nAttrMon-nOutput-Channels)                     | openaf/nattrmon         | Output Channels      | 
