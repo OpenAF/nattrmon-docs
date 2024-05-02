@@ -63,7 +63,7 @@ With the right AWS authentication and permissions this output will start sending
 
 ### Important tips
 
-1. Keep in mind that once a metric is sent to AWS CloudWatch it's not possible (at the moment of writing according with AWS documentation) to delete it. So you should be __very carefull__ with what you sent. To help with this you can use the _include_ execArgs (as described above) to slowly add new nAttrMon attribute values as needed.
+1. Keep in mind that once a metric is sent to AWS CloudWatch it's not possible (at the moment of writing according with AWS documentation) to delete it. So you should be __very careful__ with what you send. To help with this you can use the _include_ execArgs (as described above) to slowly add new nAttrMon attribute values as needed.
 
 2. For multiple entries (table/array) attribute values, the alpha-numeric values will be translated into AWS CloudWatch dimensions. It's not possible to generically cover all cases but some of these values might not be helpful in AWS CloudWatch. 
 For example, if you are using nInput_Kube_PodsMetrics it will output the attributes: _namespace, name, pod, cpuAmount and memAmount_. From theses 5 attributes, only _cpuAmount_ and _memAmount_ are numeric. So the other 3 will be converted to dimensions. Since pods get created and destroyed the attribute _pod_ will have multiple values and **won't be helpful** as a dimension poluting AWS CloudWatch metrics. To avoid this use the _excludeDim_ execArg to ensure that the _pod_ is not used.
