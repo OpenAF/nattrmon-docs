@@ -81,10 +81,10 @@ nattrmon: &NATTRMON
         checks:
         - attrPattern      : "Test \\d+"
           expr             : |
-            {{value}} > 0
+            {% raw %}{{value}} > 0{% endraw %}
           warnLevel        : MEDIUM
-          warnTitleTemplate: "Problem with {{name}}"
-          warnDescTemplate : "{{name}} had value {{value}}"
+          warnTitleTemplate: "{% raw %}Problem with {{name}}{% endraw %}"
+          warnDescTemplate : "{% raw %}{{name}} had value {{value}}{% endraw %}"
 
   # ------
   # OUTPUT
@@ -102,7 +102,7 @@ nattrmon: &NATTRMON
         _$(args.v, "args.v").$_()
         var warns = isArray(args.v) ? args.v : [args.v]
         var id    = sha1("Output Debug Warns")
-        warns.forEach(w => {
+        warns.filter(w => Object.keys(w).length > 0).forEach(w => {
           try {
             if (!nattrmon.isNotified(w.title, w.level + id)) {
               print("WARN | " + ow.format.toCSLON(args.v, true))
@@ -168,6 +168,26 @@ jobs:
 Notice the use of the new LIBS parameter (since nAttrMon >= 20240804). This allows nAttrMon to preload the s3.js library from OpenAF's S3 oPack before the definition of CHANNEL_WNOTS is evaluated.
 
 > For an environment variable implementation you would need to set the LIBS and the CHANNEL_WNOTS environment variables.
+
+### Using secrets
+
+If necessary you can use [SBuckets](https://docs.openaf.io/docs/concepts/sBuckets.html) to store the S3 access information in a secret. For that just change the __NAM_CHANNEL_WNOTS value to:
+
+```yaml
+    __NAM_CHANNEL_WNOTS      : "{ type: 's3', options: { secFile: '/secrets/secrets.yaml', secBucket: nattrmon, secKey: s3, multifile: true, gzip: true } }"
+```
+
+having a /secrets/secrets.yaml equivalent to:
+
+```yaml
+nattrmon:
+  s3:
+    s3url      : 'https://play.min.io:9000'
+    s3bucket   : nam-test
+    s3accessKey: Q3AM3UQ867SPQQA43P2F
+    s3secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+    s3prefix   : nattrmon/wnots
+```
 
 ### Note on the S3 channel options
 
