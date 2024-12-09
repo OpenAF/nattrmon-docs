@@ -77,7 +77,7 @@ validation:
 | {% raw %}{{dateModified}}{% endraw %} | The date when the attribute was modified. |
 | {% raw %}{{originalValue}}{% endraw %} | The current original attribute value. Even if the attribute value is an array it will return the original array. |
 
-You can also use [nAttrMon generic template helpers](nAttrMon-template-helpers) to access other attribute values, previous attribute values, etc...
+You can also use [nAttrMon generic template helpers](../../concepts/nAttrMon-template-helpers) to access other attribute values, previous attribute values, etc...
 
 ## More examples
 
