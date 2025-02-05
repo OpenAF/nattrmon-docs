@@ -23,6 +23,7 @@ input:
   execFrom     : nInput_DB
   execArgs     :
      key: MYAPP_DAT
+     #attrTemplate: {{key}}/{{query}}
      sqls:
         Database/Test 1  : >
            SELECT user FROM dual
@@ -49,4 +50,4 @@ If _chKeys_ is used (without defining any value for _dontUseKey_) each record wi
 | sqls | Map | No | A map of query templates (if a '{% raw %}{{lastdate}}{% endraw %}' is included it will be replaced by the last checked date), each will become an attribute |
 | sqlsByType | Map | No | In alternative to sqls lets you divide further into SQL statement per database product (e.g. postgresql, oracle, h2, etc...) |
 | dontUseKey | Boolean | No | Boolean to indicate if a key field should not be added in all records returned with chKeys. |
-| attrTemplate | String | No | The template to determine the attribute name. Defaults to "Performance/{% raw %}{{key}}{% endraw %} datamodel". |
+| attrTemplate | String | No | The template to determine the attribute name with _query_ and _key_. Defaults to "{% raw %}{{query}}{% endraw %}". |
