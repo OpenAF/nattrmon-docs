@@ -143,7 +143,7 @@ This operation is equivalent to the close warning operation but will apply to al
 
 | Permissions | Example |
 |:------------|:--------|
-| "r" | ```$ch("ops").get("poolStats");``` |
+| "r" | ```$ch("ops").get("poolsStats");``` |
 
 nAttrMon can have several internal object pools which also manage access to external resources (e.g. database, SSH, etc...). You can check the current statistics of these pools with this operation. It will return a map for each internal object pool in use with nAttrMon each with the following information:
 
