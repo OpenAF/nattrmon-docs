@@ -26,6 +26,8 @@ Enter text:
 Encrypted text: 797AD06F0FB6E1E6F4B17EB182670494D3EA259B24245847062CCA0C5D023F26
 ````
 
+> **Note:** When using newer versions of OpenAF together with Java 21 or later, generating the certificate might require the Bouncy Castle provider. You can install it by running `opack install bouncycastle` before executing the commands above.
+
 And then edit the HTTP plug, for example as 00.http.yaml:
 
 ````yaml
